@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f4f4f4;
+}
+
+header.hero {
+    background: #282c34;
+    color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+section.project-details {
+    padding: 40px 20px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #282c34;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}

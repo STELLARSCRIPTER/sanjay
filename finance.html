@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Strategies - Sanjay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #f0f0f0;
+            background-color: #121212;
+            background-image: url('investment-business-budget-credit-costs-concept_53876-13720.avif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+            z-index: -1;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent background */
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar .logo a {
+            font-size: 28px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar .logo a:hover {
+            color: #1db954;
+        }
+
+        .navbar .social-link img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1db954;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            color: #ffffff;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        /* Project Details */
+        .project-details {
+            padding: 60px 20px;
+            background-color: rgba(34, 34, 34, 0.95);
+            color: #f0f0f0;
+            margin: 30px 0;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .project-details h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #1db954;
+            padding-bottom: 10px;
+        }
+
+        .project-details p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .project-details h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1db954;
+        }
+
+        .project-details ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-details ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Sanjay</a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                              <a href="https://github.com/StellarScripter" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Investment Strategies</h1>
+            <p>A deep dive into different investment strategies, including value investing, growth investing, and passive vs. active management, with real-world examples.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Project Information -->
+    <section class="project-details">
+        <div class="container">
+            <h2>Investment Strategies</h2>
+            <p><strong>Description:</strong> This project explores various investment strategies, focusing on value investing, growth investing, and the debate between passive and active management. Real-world examples are provided to illustrate each strategy's effectiveness.</p>
+            
+            <h3>Advantages</h3>
+            <ul>
+                <li>Provides insights into different investment approaches.</li>
+                <li>Helps in understanding the risk and reward of various strategies.</li>
+                <li>Offers practical examples to guide investment decisions.</li>
+            </ul>
+            
+            <h3>Tools Used</h3>
+            <ul>
+                <li>Excel (for financial modeling)</li>
+                <li>Python (for backtesting strategies)</li>
+                <li>Yahoo Finance API (for data extraction)</li>
+                <li>Tableau (for data visualization)</li>
+            </ul>
+            
+            <h3>Time Taken</h3>
+            <p>Approximately 8 weeks, including research, strategy development, and backtesting.</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,444 @@
+:root {
+    --bg-color: #f9f9f9; /* Light pastel background */
+    --text-color: #1e1e1e; /* Dark text for contrast */
+    --link-color: #ff9a9e; /* Soft pastel pink */
+    --navbar-bg: #ffffff; /* White background for navbar */
+    --project-bg: #ffffff; /* White background for project items */
+    --btn-bg: #ff9a9e; /* Soft pastel pink for buttons */
+    --btn-hover-bg: #ff6f61; /* Bright coral for button hover */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: var(--navbar-bg);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .nav-links li a:hover {
+    color: var(--link-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(45deg, #e0c3fc, #8ec5fc); /* Soft pastel gradient */
+    color: var(--text-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: var(--btn-bg);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+.about .about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Projects Section */
+.projects {
+    padding: 60px 0;
+}
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.projects .project-item {
+    flex: 1;
+    min-width: 45%;
+    background-color: var(--project-bg);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.projects .project-item:hover {
+    transform: translateY(-10px);
+    background-color: var(--btn-hover-bg);
+}
+
+.projects .project-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projects .project-item p {
+    font-size: 16px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 60px 0;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.skills ul li {
+    background-color: var(--project-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Resume Section */
+.resume {
+    padding: 60px 0;
+    text-align: left;
+}
+
+.resume .btn {
+    padding: 10px 30px;
+    background-color: var(--btn-bg);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume .btn:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    text-align: left;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--project-bg);
+    color: var(--text-color);
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: var(--btn-bg);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Social Links */
+.social-link {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
+}
+
+.social-link img:hover {
+    opacity: 0.7;
+}
+
+/* Spencerian Font */
+h1, h2, h3, p, .btn {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+p {
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.btn {
+    font-weight: 400;
+    background-color: var(--btn-bg);
+    color: var(--bg-color);
+}
+
+/* Nostalgic Macintosh Theme */
+.screen {
+    background-color: black;
+    color: green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    background-color: #2d2d2d;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #ccc;
+    border-bottom: 2px solid #333;
+}
+
+.header-text {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.content {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.command-line {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.prompt {
+    color: lightgreen;
+}
+
+.blinking-cursor {
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.command-output ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.command-output ul li {
+    margin-bottom: 5px;
+}
+
+.command-output ul li a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.command-output ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.section ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 5px;
+}
+
+.section ul li a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.section ul li a:hover {
+    text-decoration: underline;
+}
+
+.section h2, .section h3 {
+    color: lightgreen;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: lightgreen;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: 1px solid #2d2d2d;
+    color: lightgreen;
+}
+
+form button[type="submit"] {
+    background-color: #2d2d2d;
+    color: lightgreen;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Fullscreen Toggle */
+.fullscreen-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2d2d2d;
+    color: lightgreen;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fullscreen-toggle:hover {
+    background-color: #333;
+}

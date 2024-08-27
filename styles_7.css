@@ -1,0 +1,320 @@
+:root {
+    --bg-color: #1e1e1e; /* Dark gray background */
+    --text-color: #d0d0d0; /* Softer gray for text */
+    --link-color: #b87333; /* Copper for links */
+    --link-hover-color: #d4af37; /* Brighter copper on hover/focus */
+    --btn-bg: #b87333; /* Copper for buttons */
+    --btn-hover-bg: #d4af37; /* Brighter copper for button hover */
+    --navbar-bg: #2c2c2e; /* Lighter gray for navbar */
+    --hero-bg: rgba(0, 0, 0, 0.5); /* Adjust as needed */
+    --project-bg: #2c2c2e; /* Lighter gray for project backgrounds */
+    --border-color: rgba(255, 255, 255, 0.4); /* Lighter border color */
+}
+
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+/* Font Styling */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #87CEEB; /* Sky blue color for headings */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--btn-bg);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, button:focus {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: var(--link-color);
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    background-image: url('gaze.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero {
+    position: relative;
+    /* Other styles */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+
+
+
+.hero .content {
+    position: relative; /* Ensures text is above the overlay */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* About Section Styles */
+.about {
+    padding: 60px 20px;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row; /* Align items horizontally */
+}
+
+.about .about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.about .about-text {
+    max-width: 600px;
+}
+
+/* Projects Section Styles */
+.projects {
+    padding: 40px 20px;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projects .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects .project-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--project-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.projects .project-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Profile Section Styles */
+.profile {
+    padding: 60px 0;
+    background-color: var(--bg-color); /* Ensure consistency */
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-image {
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-details {
+    max-width: 600px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust space between icons */
+    margin-top: 20px;
+}
+
+.social-link {
+    font-size: 24px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #87CEEB; /* Sky blue accent color on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 10px;
+    }
+    .about, .projects {
+        padding: 40px 10px;
+    }
+    .about .about-content {
+        flex-direction: column;
+    }
+}
+
+/* Additional Styles for Readability */
+.hero-content, .about-content, .projects, .skills, .resume {
+    background-color: rgba(0, 0, 0, 0.8); /* Subtle dark background */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.project-details {
+    padding: 40px 20px;
+    background-color: #2c2c2e; /* Lighter gray for project details */
+}
+
+.project-details h2 {
+    font-size: 36px;
+    color: #87CEEB; /* Sky blue color for headings */
+}
+
+.project-details p, .project-details ul {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d0d0d0;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Resume Section Styles */
+.resume {
+    padding: 50px 0;
+    background-color: #1e1e1e;
+}
+
+.resume h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #87CEEB;
+}

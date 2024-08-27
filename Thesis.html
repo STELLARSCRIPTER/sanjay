@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stability of Black Holes - Sanjay</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffd700;
+            background: #000 url('images/starry-sky.gif') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px #ffd700;
+        }
+
+        .navbar .logo a {
+            font-size: 24px;
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ffcc00;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: #ffcc00;
+            text-shadow: 0 0 5px #ffd700;
+        }
+
+        .project-details {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: #ffd700;
+            box-shadow: 0 0 20px #ffd700;
+        }
+
+        .project-details h2, .project-details h3 {
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .project-details p, .project-details ul {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .project-details ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .social-link img {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Flying Variables */
+        .flying-variables {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .variable {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 215, 0, 0.7);
+            animation: fly 15s linear infinite;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(20vw); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <nav class="navbar">
+            
+        </nav>
+        <div class="hero-content">
+            <h1>Stability of Black Holes</h1>
+            <p>An in-depth analysis of black hole stability, exploring the dynamics and implications of gravitational forces.</p>
+        </div>
+    </header>
+    <body>
+    <!-- Detailed Project Information -->
+    <section class="project-details">
+        <div class="container">
+            <h2>Stability of Black Holes</h2>
+            <p><strong>Description:</strong> An in-depth analysis of black hole stability, exploring the dynamics and implications of gravitational forces. This project involves mathematical modeling and simulations to understand the conditions under which black holes remain stable or undergo significant changes.</p>
+            
+            <h3>Advantages</h3>
+            <ul>
+                <li>Provides insights into the fundamental aspects of black hole physics.</li>
+                <li>Enhances understanding of gravitational dynamics and cosmic phenomena.</li>
+                <li>Contributes to theoretical astrophysics and cosmology research.</li>
+            </ul>
+            
+            <h3>Tools Used</h3>
+            <ul>
+                <li>Mathematical Modeling Software (e.g., MATLAB, Mathematics,Latex)</li>
+                <li>Simulation Tools (e.g., Python for numerical simulations)</li>
+                <li>Data Analysis Tools (e.g., Python, R)</li>
+            </ul>
+            
+            <h3>Time Taken</h3>
+            <p> 2 Years, including , Research, literature review, model development, simulations, and analysis.</p>
+        </div>
+    </section>
+
+    <!-- Flying Mathematical Variables -->
+    <div class="flying-variables" id="flyingVariables"></div>
+
+    <script>
+        const variables = ['Δ', '∇', '√', 'π', '∞', 'Σ', 'Ω', 'λ', 'Ψ', '∂', '∫', '≈', '≠', '≥', '≤'];
+        const flyingVariables = document.getElementById('flyingVariables');
+
+        function createVariable() {
+            const variable = document.createElement('div');
+            variable.className = 'variable';
+            variable.textContent = variables[Math.floor(Math.random() * variables.length)];
+            variable.style.top = Math.random() * 100 + 'vh';
+            variable.style.left = Math.random() * 100 + 'vw';
+            variable.style.animationDuration = Math.random() * 5 + 10 + 's';
+            variable.style.fontSize = Math.random() * 20 + 20 + 'px';
+            flyingVariables.appendChild(variable);
+
+            // Remove the variable after its animation is complete
+            variable.addEventListener('animationend', () => {
+                flyingVariables.removeChild(variable);
+            });
+        }
+
+        // Create variables at intervals
+        setInterval(createVariable, 500);
+    </script>
+</body>
+</html>
